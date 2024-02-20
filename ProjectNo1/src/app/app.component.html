@@ -1,0 +1,50 @@
+
+<div class="container">
+<form [formGroup] = "MarvellousForm" class="form">
+  
+  <img src="https://th.bing.com/th?id=OIP.puzai_D4808Fi7vlZTj3dQHaFh&w=289&h=216&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2" class="image">
+  <h1 class="Contact">Contact Our</h1>
+  
+  <h2 class="Customer">Customer Support Center</h2>
+
+  
+  <br>
+
+  <h4 class="contactinfo"> Contact Information</h4>
+  <h5 class="infocontact">Please fill out your information below</h5>
+  
+
+  <div class="form-group">
+    <div class="form-group">
+      <label>Name</label>
+      <input [class.is-invalid] = "MarvellousForm.get('username')?.invalid && MarvellousForm.get('username')?.touched" type="username" class="form-control" formControlName="username">
+      <small [class.d-none]="MarvellousForm.get('username')?.valid || MarvellousForm.get('username')?.untouched" class="text-danger">Name is required</small>
+    </div>
+
+  
+  
+  <div class="form-group">
+    <label>Email</label>
+    <input [class.is-invalid] = "MarvellousForm.get('email')?.invalid && MarvellousForm.get('email')?.touched" type="email" class="form-control" formControlName="email">
+    <small [class.d-none]="MarvellousForm.get('email')?.valid || MarvellousForm.get('email')?.untouched" class="text-danger">Email is required</small>
+  </div>
+
+  <div class="form-group">
+    <label>Phone</label>
+    <input [class.is-invalid] = "MarvellousForm.get('phone')?.invalid && MarvellousForm.get('phone')?.touched" type="phone" class="form-control" formControlName="phone">
+    <small [class.d-none]="MarvellousForm.get('phone')?.valid || MarvellousForm.get('phone')?.untouched" class="text-danger">Phone number is required</small>
+  </div>
+
+  <div class="form-group">
+    <label>Address</label>
+    <input [class.is-invalid] = "MarvellousForm.get('address')?.invalid && MarvellousForm.get('address')?.touched" type="address" class="form-control" formControlName="address">
+    <small [class.d-none]="MarvellousForm.get('address')?.valid || MarvellousForm.get('address')?.untouched" class="text-danger">Address is required</small>
+  </div>
+  
+  
+  
+
+  <button type="submit" class="btn btn-primary">SUBMIT FORM</button>
+  
+
+
